@@ -55,11 +55,11 @@ function handleText(textNode) {
     v = v.replace(expression, () => {
       counter++;
       return '';
-    })
+    });
     
     if (v !== oldValue) {
       textNode.nodeValue = v;
-      chrome.browserAction.setBadgeText({text: '' + counter})
+      chrome.runtime.sendMessage({type: 'updateBadge', text: counter})
     }
   })
 }
