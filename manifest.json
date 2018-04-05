@@ -1,14 +1,16 @@
 {
-  "name": "Replace zero-width characters with emojis",
+  "name": "Strip Zero Width Characters",
   "version": "0.0.1",
-  "description": "Replace zero-width characters hidden on a page with emojis! Inspired by https://goo.gl/f3hUx1",
+  "description": "Strip out all zero-width characters",
   "manifest_version": 2,
-  "background": {
-    "scripts": ["background.js"],
-    "persistent": false
-  },
-  "permissions": ["declarativeContent", "activeTab"],
-  "page_action": {
-    "default_popup": "popup.html"
+  "content_scripts": [
+    {
+      "matches": ["*://*/*"],
+			"js": ["content_script.js"],
+			"run_at": "document_end"
+    }
+  ],
+  "browser_action": {
+    "default_icon": "icon.png"
   }
 }
