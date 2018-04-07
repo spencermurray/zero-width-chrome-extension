@@ -47,7 +47,14 @@ function handleText(textNode) {
     - \uFEFF === &#65279; === %EF%BB%BF
 
   */
-  const zeroWidthCharRegexes = ['\uFEFF', '\u200B', '\u200C'].map(zwc => new RegExp(zwc, 'g'));
+  let zeroWidthChars = ['\uFEFF', '\u200B', '\u200C']
+
+  // if the user has set strip \u200D to true then add \u200D to the array of zero width characters
+  chrome.storage.sync.get({stripZwj: 'false'}, (obj => {
+   if (obj.stripZwj === 'true') zeroWidthChars.push('\u200D');
+  }));
+
+  const zeroWidthCharRegexes = zeroWidthChars.map(zwc => new RegExp(zwc, 'g'));
   const oldValue = textNode.nodeValue;
   let v = textNode.nodeValue;
   

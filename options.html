@@ -1,0 +1,27 @@
+<html>
+    <body>
+        <div id="options-outer" style="margin: 5px; background: #DDD; border-radius: 5px;">
+            <div id="options-inner" style="padding: 8px;">
+                <div id="options-page-title" class="page-title" style="font-size: 20px; line-height: 24px;">Strip \u200D as well?</div>
+                <div id="options-page-subtitle" class="page-subtitle" style="font-size: 16px; line-height: 20px;">Enabling stripping this
+                    will break certain emojis and languages like arabic.
+                    See <a href="https://en.wikipedia.org/wiki/Zero-width_joiner">https://en.wikipedia.org/wiki/Zero-width_joiner</a></div>
+                <div id="options-area" style="margin-top: 10px;">
+                    <div class="control-group">
+                        <div class="controls">
+                            <select id="zwj-dropdown" class="span5">
+                                <option value="true">Yes</option>
+                                <option value="false">No</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <button id="save-options-button" class="btn btn-success" style="margin-top: 5px;">Save Options</button>
+                <p id="saved-options"></p>
+            </div>
+        </div>
+        
+        <!-- load javascript: unique html page javascript file -->
+        <script type="text/javascript" src="options.js"></script>
+    </body>
+</html>
