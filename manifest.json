@@ -1,22 +1,22 @@
 {
-  "name": "Strip Zero Width Characters",
+  "name": "Delete Zero Width Characters",
   "version": "0.0.1",
-  "description": "Strip out all zero-width characters",
+  "description": "Automatically delete all zero-width characters on a page.  Visit https://umpox.github.io/zero-width-detection to test it out",
   "manifest_version": 2,
   "content_scripts": [
     {
       "matches": ["*://*/*"],
-			"js": ["content_script.js"],
+			"js": ["js/content_script.js"],
 			"run_at": "document_end"
     }
   ],
   "background": {
-    "scripts": ["background.js"],
+    "scripts": ["js/background.js"],
     "persistent": false
   },
   "browser_action": {
     "default_icon": "icon.png"
   },
   "permissions": ["storage"],
-  "options_page": "options.html"
+  "options_page": "html/options.html"
 }

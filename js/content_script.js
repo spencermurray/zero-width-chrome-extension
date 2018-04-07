@@ -71,6 +71,7 @@ function handleText(textNode) {
   })
 }
 
+// watch the page for new changes.  Needed for pages that lazy load, pages with infinite scroll, etc...
 MutationObserver = window.MutationObserver || window.WebKitMutationObserver;
 const observer = new MutationObserver(mutations => {
   mutations.forEach(m => {
