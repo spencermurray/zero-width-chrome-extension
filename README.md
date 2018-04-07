@@ -10,7 +10,7 @@ This chrome extension automatically strips out the following zero width characte
 
 You can install it as an "unpacked" extension or [from the Chrome Web Store](https://chrome.google.com/webstore/).
 
-Once you've installed it you can verify it's working by visiting [Umpox's zero width demo page] (https://umpox.github.io/zero-width-detection/) and verify your "username" is no longer detected
+Once you've installed it you can verify it's working by visiting [Umpox's zero width demo page](https://umpox.github.io/zero-width-detection/) and verify your "username" is no longer detected
 ![screenshot](https://user-images.githubusercontent.com/7017713/38451133-7b673f1c-39f8-11e8-8d77-3811e8f14003.png)
 
 Here's the extension in action:
